@@ -4,6 +4,7 @@ To Run:
 - follow instructions below to run zotero translation server (ZTS)
 - Make sure ZTS runs on port 1969 (otherwise, you'll need to change the port setting in Main.py)
 - Configure Zotero User ID and API Key directly in Main.py
+- Enable virtual environment and install requirements from requirements.txt within OAPipeline directory
 - Run Main.py while ZTS is running and wait for Main.py to finish processing before shutting down ZTS
 
 
