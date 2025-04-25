@@ -6,16 +6,27 @@ from pyzotero import zotero
 from difflib import SequenceMatcher
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
+from logging.handlers import RotatingFileHandler
 from datetime import datetime
 
-# Configure logging
-log_file = "script_log.txt"
-logging.basicConfig(
-    filename=log_file,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
+# Configure logging with runtime-based filename and size limit
+runtime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+log_file = f"script_log_{runtime}.txt"
+
+# Set up a rotating file handler with a size limit (e.g., 5 MB) and backup count
+log_handler = RotatingFileHandler(
+    log_file, maxBytes=5 * 1024 * 1024, backupCount=3  # 5 MB per file, keep 3 backups
 )
+log_formatter = logging.Formatter(
+    "%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+)
+log_handler.setFormatter(log_formatter)
+
+# Set up the root logger
+logging.basicConfig(level=logging.INFO, handlers=[log_handler])
+
+# Example log message to test the configuration
+logging.info("Logging initialized with runtime-based filename and size limit.")
 
 # === Config ===
 ZOTERO_API_KEY = 'lDjfA0baCFO75mk0m7sA0D8G'
