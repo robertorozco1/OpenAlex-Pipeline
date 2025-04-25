@@ -3,4 +3,8 @@ config/production.json
 config/dev.json
 config/local.json
 lambda_config*.env
-
+.venv
+package-lock.json
+OAPipeV3/script_log.txt
+OAPipeV3/total_items_tracker.txt
+__pycache__/
