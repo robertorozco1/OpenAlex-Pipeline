@@ -7,8 +7,15 @@ To Run:
 - Enable virtual environment and install requirements from requirements.txt within OAPipeline directory
 - Run Main.py while ZTS is running and wait for Main.py to finish processing before shutting down ZTS
 
+*Note: when cloning repo, you need to run --recurse-submodules 
 
+1. `git clone --recurse-submodules https://github.com/robertorozco1/OpenAlex-Pipeline.git`
 
+1. `cd translation-server`
+
+1. `npm install`
+
+This repo has the module "translator" pulling from a forked copy of the upstream repo(https://github.com/robertorozco1/translators), with changes made to th e "OpenAlex JSON.js" file in that module. 
 
 
 # Zotero Translation Server
