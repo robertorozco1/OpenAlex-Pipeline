@@ -1,3 +1,15 @@
+# OPENALEX to Zotero API Pipeline - CSC 400 Capstone Project
+
+To Run:
+- follow instructions below to run zotero translation server (ZTS)
+- Make sure ZTS runs on port 1969 (otherwise, you'll need to change the port setting in Main.py)
+- Configure Zotero User ID and API Key directly in Main.py
+- Run Main.py while ZTS is running and wait for Main.py to finish processing before shutting down ZTS
+
+
+
+
+
 # Zotero Translation Server
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/zotero/translation-server/ci.yml?branch=master)](https://github.com/zotero/translation-server/actions)
