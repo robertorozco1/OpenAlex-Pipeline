@@ -11,7 +11,7 @@ To Run:
 
 1. `git clone --recurse-submodules https://github.com/robertorozco1/OpenAlex-Pipeline.git`
 
-1. `cd translation-server`
+1. `cd OpenAlex-Pipeline`
 
 1. `npm install`
 
